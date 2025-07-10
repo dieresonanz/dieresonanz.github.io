@@ -1,5 +1,5 @@
 ---
-cid: R01 # DO NOT CHANGE
+cid: R01
 titel: Raum 01.
 name: Echo.
 beschreibung: So schön so toll.

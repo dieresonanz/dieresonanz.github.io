@@ -1,5 +1,5 @@
 ---
-cid: R03 # DO NOT CHANGE
+cid: R03
 titel: Facilities.
 name: Gemeinsamer Raum.
 beschreibung: Alle lieben es bei uns.
