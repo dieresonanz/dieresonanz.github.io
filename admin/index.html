@@ -1,14 +1,21 @@
 <!doctype html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <title>Admin</title>
+    <meta charset="utf-8">
+    <title>Content Manager</title>
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </head>
   <body>
     <script>
       window.CMS_MANUAL_INIT = true;
     </script>
-    <script src="/admin/config.yml" type="text/yaml"></script>
+    <script src="config.yml" type="text/yaml"></script>
+    <script>
+      fetch('config.yml')
+        .then(res => res.text())
+        .then(config => {
+          CMS.init({ config: jsyaml.load(config) });
+        });
+    </script>
   </body>
 </html>
