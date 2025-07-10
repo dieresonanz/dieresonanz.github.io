@@ -7,14 +7,7 @@
   </head>
   <body>
     <script>
-      window.CMS_MANUAL_INIT = true;
-    </script>
-    <script type="module">
-      import yaml from 'https://cdn.skypack.dev/js-yaml';
-      const res = await fetch('/admin/config.yml');
-      const configText = await res.text();
-      const config = yaml.load(configText);
-      CMS.init({ config });
+      // Nothing needed here!
     </script>
   </body>
 </html>
