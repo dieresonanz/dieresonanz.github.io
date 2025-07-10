@@ -19,3 +19,5 @@ collections:
   reviews:
     output: false
     sort_by: year
+  content:
+    output: false  # or true if you want Jekyll to render individual pages

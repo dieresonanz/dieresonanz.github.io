@@ -6,12 +6,12 @@ title: Home
 <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
   <div class="container">
     <a class="navbar-brand pe-4 fs-4" href="/">
-  <img src="img/logo.png"  class="bi bi-layers-half"  alt="nice gallery image" width="64">
-  <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
-    <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
-  </svg> -->
-  <span class="ms-1 fw-bolder"><span class="font-serif">die </span>RESONANZ</span>
-</a>
+      <img src="img/logo.png"  class="bi bi-layers-half"  alt="nice gallery image" width="64">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-layers-half" viewbox="0 0 16 16">
+        <path d="M8.235 1.559a.5.5 0 0 0-.47 0l-7.5 4a.5.5 0 0 0 0 .882L3.188 8 .264 9.559a.5.5 0 0 0 0 .882l7.5 4a.5.5 0 0 0 .47 0l7.5-4a.5.5 0 0 0 0-.882L12.813 8l2.922-1.559a.5.5 0 0 0 0-.882l-7.5-4zM8 9.433 1.562 6 8 2.567 14.438 6 8 9.433z"/>
+      </svg> -->
+      <span class="ms-1 fw-bolder"><span class="font-serif">die </span>RESONANZ</span>
+    </a>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -19,28 +19,18 @@ title: Home
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
       <li class="nav-item">
-    <a class="nav-link" href="#raeume" aria-label="Brings you to the frontpage">
+    <a class="nav-link" href="#top" aria-label="Brings you to the frontpage">
       Über uns
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#aboutus">
+    <a class="nav-link" href="#raeume">
       Räume
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#numbers">
-      Numbers
     </a>
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#galerie">
       Galerie
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#workwithus">
-      Work with us
     </a>
   </li>
   <li class="nav-item">
@@ -55,176 +45,182 @@ title: Home
 </nav>
 
     <main>
+      {% assign head = site.content | where: "cid", "HEAD" | first %}
+      {% assign studio = site.content | where: "cid", "STUDIO" | first %}
+      {% assign raum1 = site.content | where: "cid", "R01" | first %}
+      {% assign raum2 = site.content | where: "cid", "R02" | first %}
+      {% assign raum3 = site.content | where: "cid", "R03" | first %}
+
+
       <div class="w-100 overflow-hidden bg-gray-100" id="top">
   
-<div class="container position-relative">
-  <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/baustelle.jpeg);">
-    
-  </div>
-    <div class="row">
-
-
-<div class="col-lg-7 py-vh-6 position-relative" data-aos="fade-right">
-  <h1 class="display-1 fw-bold mt-5">{{ site.data.content.headline.titel | markdownify  }}</h1>
-  <p class="lead">{{ site.data.content.headline.untertitel }}</p>
-  <a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">{{ site.data.content.headline.button }}</a>
-</div>
-
-
-</div>
-</div>
-
-</div>
-
-<div class="py-vh-5 w-100 overflow-hidden" id="raeume">
-  <div class="container">
-      <div class="row d-flex justify-content-end">
-<div class="col-lg-8" data-aos="fade-down"><h2 class="display-6">{{ site.data.content.headline.text }}</h2></div>
-</div>
-
-<div class="row d-flex align-items-center">
-<div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="200">
-  <span class="h5 fw-lighter">Raum 01.</span>
-  <h3 class="py-5 border-top border-dark">Echo.</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
-</div>
-
-<div class="col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="400">
-  <span class="h5 fw-lighter">Raum 02.</span>
-  <h3 class="py-5 border-top border-dark">Impuls.</h3>
-  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus culpa, voluptatibus ex itaque, sapiente a consequatur inventore beatae, ipsam debitis omnis consequuntur iste asperiores. Similique quisquam debitis corrupti deserunt, dolor.</p>
-  <a href="#" class="link-fancy">Learn more
-  </a>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="aboutus">
-  <div class="container">
-      
-<div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-6">
-  <div class="row gx-5 d-flex">
-    <div class="col-md-11">
-      <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url(img/webp/people15.webp);--bs-aspect-ratio: 50%;">
-      </div>
-    </div>
-    <div class="col-md-5 offset-md-1">
-      <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url(img/webp/interior42.webp);">
-      </div>
-    </div>
-    <div class="col-md-6">
-      <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url(img/webp/people4.webp);--bs-aspect-ratio: 150%;">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="col-lg-4">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-left">We did some interesting stuff in our field of work. For example we collect a lot of these free photos and use them on our website.</h3>
-  <p data-aos="fade-left" data-aos-delay="200">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-  </p>
-  <p>
-    <a href="#" class="link-fancy link-dark" data-aos="fade-left" data-aos-delay="400">Learn more
-    </a>
-  </p>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="py-vh-5 w-100 overflow-hidden" id="numbers">
-  <div class="container">
-      <div class="row d-flex justify-content-between align-items-center">
-  <div class="col-lg-5">
-    <h3 class="py-5 border-top border-dark" data-aos="fade-right">Our magic numbers</h3>
-</div>
-<div class="col-lg-6">
-  <div class="row">
-    <div class="col-12">
-    <h2 class="display-6 mb-5" data-aos="fade-down">There are some important numbers for us. They are just numbers without any meaning, but we just love them.</h2>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4">42%</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-    <div class="col-lg-6" data-aos="fade-up">
-      <div class="display-1 fw-bold py-4">+300</div>
-      <p class="text-black-50">Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.</p>
-    </div>
-  </div>
-</div>
-</div>
-
-  </div>
-</div>
-
-<div class="position-relative overflow-hidden w-100 bg-light" id="galerie">
-  <div class="container-fluid">
-  <div class="row overflow-scroll">
-    <div class="col-12">
-      <div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
-        <div class="col-md-2" data-aos="fade-up">
-            <img src="img/webp/interior37.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
-        </div>
-
-        <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
-            <img src="img/webp/people1.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
-        </div>
-
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
-            <img src="img/webp/people2.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1054">
-        </div>
-
-        <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
-            <img src="img/webp/interior29.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="562">
-        </div>
-
-        <div class="col-md-2" data-aos="fade-up" data-aos-delay="800">
-            <img src="img/webp/people23.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+        <div class="container position-relative">
+          <div class="col-12 col-lg-8 mt-0 h-100 position-absolute top-0 end-0 bg-cover" data-aos="fade-left" style="background-image: url(img/baustelle.jpeg);">
+          </div>
+          <div class="row">
+            <div class="col-lg-5 py-vh-6 position-relative" data-aos="fade-right">
+              <h1 class="display-1 fw-bold mt-5">{{ head.titel | markdownify  }}</h1>
+              <p class="lead">{{ head.beschreibung }}</p>
+              <a href="#" class="btn btn-dark btn-xl shadow me-3 rounded-0 my-5">{{ head.button }}</a>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-   </div>
- </div>
 
-</div>
+      <div class="py-vh-5 w-100 overflow-hidden" id="raeume">
+        <div class="container">
+            <div class="row d-flex justify-content-end">
+              <div class="col-lg-8" data-aos="fade-down">
+                <h2 class="display-6">{{ studio.text }}</h2>
+              </div>
+            </div>
 
-<div class="container py-vh-4 w-100 overflow-hidden">
-  <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-lg-5">
-  <h3 class="py-5 border-top border-dark" data-aos="fade-right">What our clients say</h3>
-</div>
-<div class="col-md-7" data-aos="fade-left">
-  <blockquote>
-    <div class="fs-4 my-3 fw-light pt-4 border-bottom pb-3">“I´am the CEO of this company. So maybe you think "he will tell us something super awesome about it only". But no. Its a really strange place to work with creepy people all around.
-      They do some computer stuff I don´t understand. But I wear expensive Glasses and a Patagonia Hoodie. So I´am fine with it.”</div>
-    <img src="img/webp/person11.webp" width="64" height="64" class="img-fluid rounded-circle me-3" alt="" data-aos="fade">
-    <span><span class="fw-bold">John Doe,</span>
-      CEO of Stride Ltd.</span>
-  </blockquote>
-</div>
+            <div class="row d-flex align-items-center">
+              <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                <span class="h5 fw-lighter">{{ studio.raum1-titel }}</span>
+                <h3 class="py-5 border-top border-dark">{{ raum1.name }}</h3>
+                <p>{{ raum1.beschreibung }}</p>
+                <a href="#raum1" class="link-fancy">{{ raum1.link-text }}
+                </a>
+              </div>
 
-  </div>
-</div>
+              <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                <span class="h5 fw-lighter">{{ studio.raum2-titel }}</span>
+                <h3 class="py-5 border-top border-dark">{{ raum2.name }}</h3>
+                <p>{{ raum2.beschreibung }}</p>
+                <a href="#raum2" class="link-fancy">{{ raum2.link-text }}
+                </a>
+              </div>
 
-<div class="py-vh-6 bg-gray-900 text-light w-100 overflow-hidden" id="workwithus">
-  <div class="container">
-    <div class="row d-flex justify-content-center">
-      <div class="row d-flex justify-content-center text-center">
-  <div class="col-lg-8 text-center" data-aos="fade">
-        <p class="text-secondary lead">Let´s start a project together!</p>
-    <h2 class="display-6 mb-5">Hell no! This button is linked to a none working contact form. A none working form without any user feedback. So you might think you done something wrong. But in reality we just don´t want to start anything with you or anyone else.</h2>
-  </div>
-  <div class="col-12">
-    <a href="#" class="btn btn-warning btn-xl shadow me-3 mt-4" data-aos="fade-down">Get in contact</a>
-  </div>
-</div>
+              <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                <span class="h5 fw-lighter">{{ studio.raum3-titel }}</span>
+                <h3 class="py-5 border-top border-dark">{{ raum3.name }}</h3>
+                <p>{{ raum3.beschreibung }}</p>
+                <a href="#raum3" class="link-fancy">{{ raum3.link-text }}
+                </a>
+              </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="raum1">
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-6">
+              <div class="row gx-5 d-flex">
+                <div class="col-md-11">
+                  <div class="shadow ratio ratio-16x9 rounded bg-cover bp-center align-self-end" data-aos="fade-right" style="background-image: url( {{ raum1.bild1 }} );--bs-aspect-ratio: 70%;">
+                  </div>
+                </div>
+                <div class="col-md-5 offset-md-1">
+                  <div class="shadow ratio ratio-1x1 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-up" style="background-image: url( {{ raum1.bild2 }});">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="col-12 shadow ratio rounded bg-cover mt-5 bp-center" data-aos="fade-left" style="background-image: url( {{ raum1.bild3 }});--bs-aspect-ratio: 150%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h2 class="py-5 border-top border-dark" data-aos="fade-left">{{raum1.name}}</h2>
+              
+              <h3 class="py-5" data-aos="fade-left">{{raum1.textblock-gross}}</h3>
+              <p data-aos="fade-left" data-aos-delay="200">{{raum1.textblock-klein}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="raum2">
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-6">
+              <div class="row gx-5 d-flex">
+                <div class="col-md-5">
+                  <div class="shadow ratio rounded bg-cover bp-center" data-aos="fade-left" style="background-image: url( {{ raum2.bild1 }});--bs-aspect-ratio: 120%;">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="shadow ratio ratio-4x3 rounded bg-cover bp-center align-self-end" data-aos="fade-up" style="background-image: url( {{ raum2.bild2 }});">
+                  </div>
+                </div>
+                <div class="col-md-11 offset-md-1">
+                  <div class="shadow ratio ratio-16x9 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-right" style="background-image: url( {{ raum2.bild3 }} );--bs-aspect-ratio: 70%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h2 class="py-5 border-top border-dark" data-aos="fade-left">{{raum2.name}}</h2>
+              
+              <h3 class="py-5" data-aos="fade-left">{{raum2.textblock-gross}}</h3>
+              <p data-aos="fade-left" data-aos-delay="200">{{raum2.textblock-klein}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="py-vh-4 bg-gray-100 w-100 overflow-hidden" id="raum3">
+        <div class="container">
+          <div class="row d-flex justify-content-between align-items-center">
+            <div class="col-lg-6">
+              <div class="row gx-5 d-flex">
+                <div class="col-md-5">
+                  <div class="shadow ratio rounded bg-cover bp-center" data-aos="fade-left" style="background-image: url( {{ raum3.bild3 }});--bs-aspect-ratio: 120%;">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="shadow ratio ratio-4x3 rounded bg-cover bp-center align-self-end" data-aos="fade-up" style="background-image: url( {{ raum3.bild2 }});">
+                  </div>
+                </div>
+                <div class="col-md-11 offset-md-1">
+                  <div class="shadow ratio ratio-16x9 rounded bg-cover mt-5 bp-center float-end" data-aos="fade-right" style="background-image: url( {{ raum3.bild1 }} );--bs-aspect-ratio: 70%;">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <h2 class="py-5 border-top border-dark" data-aos="fade-left">{{raum3.name}}</h2>
+              
+              <h3 class="py-5" data-aos="fade-left">{{raum3.textblock-gross}}</h3>
+              <p data-aos="fade-left" data-aos-delay="200">{{raum3.textblock-klein}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="position-relative overflow-hidden w-100 bg-light" id="galerie">
+        <div class="container-fluid">
+          <div class="row overflow-scroll">
+            <div class="col-12">
+              <div class="row vw-100 px-0 py-vh-5 d-flex align-items-center scrollx">
+                <div class="col-md-2" data-aos="fade-up">
+                    <img src="img/webp/interior37.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+                </div>
+
+                <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+                    <img src="img/webp/people1.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="1164" height="776">
+                </div>
+
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400">
+                    <img src="img/webp/people2.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="1054">
+                </div>
+
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="600">
+                    <img src="img/webp/interior29.webp" class="img-fluid rounded shadow" alt="nice gallery image" width="844" height="562">
+                </div>
+
+                <div class="col-md-2" data-aos="fade-up" data-aos-delay="800">
+                    <img src="img/webp/people23.webp" class="rounded shadow img-fluid" alt="nice gallery image" width="512" height="341">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

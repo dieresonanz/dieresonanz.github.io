@@ -1,0 +1,59 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "img"
+public_folder: "/img"
+
+collections:
+  - name: "headline"
+    label: "Headline Section"
+    folder: "_content"
+    filter: { field: "cid", value: "HEAD" }
+    create: false
+    slug: "headline"
+    fields:
+      - { label: "Titel", name: "titel", widget: "string" }
+      - { label: "Beschreibung", name: "beschreibung", widget: "text" }
+      - { label: "Button Text", name: "button", widget: "string" }
+
+  - name: "studio"
+    label: "Studio Section"
+    folder: "_content"
+    filter: { field: "cid", value: "STUDIO" }
+    create: false
+    slug: "studio"
+    fields:
+      - { label: "Titel", name: "titel", widget: "string" }
+      - { label: "Beschreibung", name: "beschreibung", widget: "text" }
+      - { label: "Button Text", name: "button", widget: "string" }
+
+  - name: "raeume"
+    label: "Räume"
+    folder: "_content"
+    filter: { field: "cid", pattern: "^R" }
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "CID", name: "cid", widget: "string", required: true, hint: "Use format R01, R02, etc. (Do not change later)" }
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Name", name: "name", widget: "string" }
+      - { label: "Beschreibung", name: "beschreibung", widget: "text" }
+      - { label: "Link Text", name: "link-text", widget: "string" }
+      - { label: "Bild 1", name: "bild1", widget: "image" }
+      - { label: "Bild 2", name: "bild2", widget: "image" }
+      - { label: "Bild 3", name: "bild3", widget: "image" }
+      - { label: "Textblock Groß", name: "textblock-gross", widget: "text" }
+      - { label: "Textblock Klein", name: "textblock-klein", widget: "text" }
+
+  - name: "reviews"
+    label: "Reviews"
+    folder: "_reviews"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Autor", name: "author", widget: "string" }
+      - { label: "Rolle", name: "role", widget: "string" }
+      - { label: "Rating (1–5)", name: "rating", widget: "number", min: 1, max: 5 }
+      - { label: "Text", name: "body", widget: "markdown" }
