@@ -11,6 +11,7 @@ plugins:
  - jekyll-sitemap
 port: 3000
 safe: true
+local_backend: true
 
 # needed for travis-ci build
 exclude: [vendor]
