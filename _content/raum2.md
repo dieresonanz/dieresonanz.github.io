@@ -1,6 +1,6 @@
 ---
 cid: R02 # DO NOT CHANGE
-title: Raum 02.
+titel: Raum 02.
 name: Impuls.
 beschreibung: So fein so gut. So fein so gut. So fein so gut. So fein so gut. So fein so gut.
 link-text: Learn more about Raum 2...

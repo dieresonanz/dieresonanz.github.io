@@ -2,6 +2,12 @@
 layout: home
 title: Home
 ---
+{% assign head = site.content | where: "cid", "HEAD" | first %}
+{% assign studio = site.content | where: "cid", "STUDIO" | first %}
+{% assign raum1 = site.content | where: "cid", "R01" | first %}
+{% assign raum2 = site.content | where: "cid", "R02" | first %}
+{% assign raum3 = site.content | where: "cid", "R03" | first %}
+
 
 <nav id="navScroll" class="navbar navbar-expand-lg navbar-light fixed-top" tabindex="0">
   <div class="container">
@@ -24,9 +30,16 @@ title: Home
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#raeume">
+    <li class="dropdown">
+      <a class="nav-link" href="#raeume">Räume</a>
+      <ul class="dropdown-content">
+        <li><a class="nav-link" href="#raum1">{{raum1.name}}</a></li>
+        <li><a class="nav-link" href="#raum2">{{raum2.name}}</a></li>
+      </ul>
+    </li>
+    <!-- <a class="nav-link" href="#raeume">
       Räume
-    </a>
+    </a> -->
   </li>
   <li class="nav-item">
     <a class="nav-link" href="#galerie">
@@ -45,13 +58,6 @@ title: Home
 </nav>
 
     <main>
-      {% assign head = site.content | where: "cid", "HEAD" | first %}
-      {% assign studio = site.content | where: "cid", "STUDIO" | first %}
-      {% assign raum1 = site.content | where: "cid", "R01" | first %}
-      {% assign raum2 = site.content | where: "cid", "R02" | first %}
-      {% assign raum3 = site.content | where: "cid", "R03" | first %}
-
-
       <div class="w-100 overflow-hidden bg-gray-100" id="top">
   
         <div class="container position-relative">
@@ -69,15 +75,15 @@ title: Home
 
       <div class="py-vh-5 w-100 overflow-hidden" id="raeume">
         <div class="container">
-            <div class="row d-flex justify-content-end">
-              <div class="col-lg-8" data-aos="fade-down">
-                <h2 class="display-6">{{ studio.text }}</h2>
+            <div class="row d-flex justify-content-end mb-5">
+              <div class="col-lg-12" data-aos="fade-down">
+                <h3 class="display-6">{{ head.textblock-klein }}</h3>
               </div>
             </div>
 
             <div class="row d-flex align-items-center">
               <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                <span class="h5 fw-lighter">{{ studio.raum1-titel }}</span>
+                <span class="h5 fw-lighter">{{ raum1.titel }}</span>
                 <h3 class="py-5 border-top border-dark">{{ raum1.name }}</h3>
                 <p>{{ raum1.beschreibung }}</p>
                 <a href="#raum1" class="link-fancy">{{ raum1.link-text }}
@@ -85,7 +91,7 @@ title: Home
               </div>
 
               <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="400">
-                <span class="h5 fw-lighter">{{ studio.raum2-titel }}</span>
+                <span class="h5 fw-lighter">{{ raum2.titel }}</span>
                 <h3 class="py-5 border-top border-dark">{{ raum2.name }}</h3>
                 <p>{{ raum2.beschreibung }}</p>
                 <a href="#raum2" class="link-fancy">{{ raum2.link-text }}
@@ -93,7 +99,7 @@ title: Home
               </div>
 
               <div class="col-md-4 col-lg-4" data-aos="fade-up" data-aos-delay="600">
-                <span class="h5 fw-lighter">{{ studio.raum3-titel }}</span>
+                <span class="h5 fw-lighter">{{ raum3.titel }}</span>
                 <h3 class="py-5 border-top border-dark">{{ raum3.name }}</h3>
                 <p>{{ raum3.beschreibung }}</p>
                 <a href="#raum3" class="link-fancy">{{ raum3.link-text }}

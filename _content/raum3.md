@@ -1,6 +1,6 @@
 ---
 cid: R03 # DO NOT CHANGE
-title: Facilities.
+titel: Facilities.
 name: Gemeinsamer Raum.
 beschreibung: Alle lieben es bei uns.
 link-text: Mehr von our common spaces...

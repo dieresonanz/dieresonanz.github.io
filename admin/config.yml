@@ -7,7 +7,7 @@ public_folder: "/img"
 
 collections:
   - name: "headline"
-    label: "Headline Section"
+    label: "Website Header"
     folder: "_content"
     filter: { field: "cid", value: "HEAD" }
     create: false
@@ -17,26 +17,16 @@ collections:
       - { label: "Beschreibung", name: "beschreibung", widget: "text" }
       - { label: "Button Text", name: "button", widget: "string" }
 
-  - name: "studio"
-    label: "Studio Section"
-    folder: "_content"
-    filter: { field: "cid", value: "STUDIO" }
-    create: false
-    slug: "studio"
-    fields:
-      - { label: "Titel", name: "titel", widget: "string" }
-      - { label: "Beschreibung", name: "beschreibung", widget: "text" }
-      - { label: "Button Text", name: "button", widget: "string" }
-
   - name: "raeume"
-    label: "Räume"
+    label: "Raumbeschreibungen"
     folder: "_content"
+    extension: "md"
     filter: { field: "cid", pattern: "^R" }
     create: true
     slug: "{{slug}}"
     fields:
       - { label: "CID", name: "cid", widget: "string", required: true, hint: "Use format R01, R02, etc. (Do not change later)" }
-      - { label: "Titel", name: "title", widget: "string" }
+      - { label: "Titel", name: "titel", widget: "string" }
       - { label: "Name", name: "name", widget: "string" }
       - { label: "Beschreibung", name: "beschreibung", widget: "text" }
       - { label: "Link Text", name: "link-text", widget: "string" }
